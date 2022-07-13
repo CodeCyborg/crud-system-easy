@@ -1,0 +1,18 @@
+// Google fonts
+//@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    //font-family: 'Spline Sans Mono', monospace;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.header{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+}

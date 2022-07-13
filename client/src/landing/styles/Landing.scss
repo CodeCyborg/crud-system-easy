@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-container{
+    height: 100vh;
+    background-color: #121212;
+    width: 40% !important;
+}
+
+.col-form{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-landing{
+    background-color: #232323;
+    color: white;
+}

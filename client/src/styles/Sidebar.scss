@@ -1,0 +1,44 @@
+.sidebar{
+    width: 14rem;
+    height: calc(100vh);
+    background-color: #191B1D;
+    border-right: 10px solid rgb(172, 172, 172);
+    ul{
+        list-style: none;
+        padding: 1rem 2rem;
+        margin-top: 5rem;
+        li{
+            margin-bottom: 2rem;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(117, 117, 117);
+        }
+    }
+}
+
+.sidebar-dark{
+    width: 14rem;
+    height: calc(100vh);
+    background-color: #191B1D;
+    border-right: 10px solid rgb(117, 117, 117);
+    ul{
+        list-style: none;
+        padding: 1rem 2rem;
+        margin-top: 5rem;
+        li{
+            margin-bottom: 2rem;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(117, 117, 117);
+        }
+    }
+}
+
+
+
+.scroll{
+    overflow-y: scroll;
+    height: 600px;
+}
