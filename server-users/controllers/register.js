@@ -30,7 +30,7 @@ const register = async (req, res) => {
           nuevoUsuario
           .save()
           .then((usuario) => {
-            res.json({ mensaje: "Usuario creado correctamente", usuario, token, auth: true });
+            res.json({ mensaje: "Usuario creado correctamente", usuario, auth: true });
           })
           .catch((error) => console.error(error));
         }

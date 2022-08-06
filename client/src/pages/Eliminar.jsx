@@ -13,9 +13,9 @@ import axios from 'axios';
 import { DarkModes } from '../context/DarkMode';
 
 // para obtener todos los datos
-const getAllEquipment = "http://localhost:8080/registers/all";
+const getAllEquipment = "https://registers-system-easy.herokuapp.com/registers/all";
 // para eliminar un dato
-const deleteEquipment = "http://localhost:8080/registers/delete/";
+const deleteEquipment = "https://registers-system-easy.herokuapp.com/registers/delete/";
 
 const Eliminar = ({name}) => {
 

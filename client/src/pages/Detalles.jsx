@@ -23,13 +23,13 @@ const Detalles = ({name}) => {
   const {contextData} = useContext(FindById);
   
   // para obtener los mantenimientos existentes
-  const getMantenimientos = `http://localhost:8080/registers/all/maintenance/${contextData._id}`;
+  const getMantenimientos = `https://registers-system-easy.herokuapp.com/registers/all/maintenance/${contextData._id}`;
   // para añadir un mantenimineto
-  const addMantenimiento = `http://localhost:8080/registers/add/maintenance/${contextData._id}`;
+  const addMantenimiento = `https://registers-system-easy.herokuapp.com/registers/add/maintenance/${contextData._id}`;
   // para editar un mantenimineto (seleccionado id)
-  const updateMantenimiento = 'http://localhost:8080/registers/update/maintenance/';
+  const updateMantenimiento = 'https://registers-system-easy.herokuapp.com/registers/update/maintenance/';
   // para eliminar un mantenimineto
-  const deleteMantenimiento = `http://localhost:8080/registers/delete/maintenance/`;
+  const deleteMantenimiento = `https://registers-system-easy.herokuapp.com/registers/delete/maintenance/`;
 
 
   const [data, setData] = useState([]);

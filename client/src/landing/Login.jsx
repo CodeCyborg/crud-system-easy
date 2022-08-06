@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Message from "../components/Message";
+import Loading from "../components/Loading";
 // axios
 import axios from "axios";
 // obreria de animaciones
@@ -21,6 +22,9 @@ const Login = () => {
 
   // color de mensaje de logueo
   const [colorMensaje, setColorMensaje] = useState(false);
+
+  // color de mensaje de caragando...
+  const [wait, setWait] = useState(false);
 
   // destructuracion para obtener el correo y contraseña y se lo asignamos a inputs(state)
   const { correo, contraseña } = inputs;
@@ -44,14 +48,16 @@ const Login = () => {
     e.preventDefault();
 
     if (correo !== "" && contraseña !== "") {
+      setWait(true)
       const Usuario = {
         correo,
         contraseña,
       };
       await axios
-        .post("http://localhost:4000/login", Usuario)
+        .post("https://users-system-easy.onrender.com/users/login", Usuario)
         .then((res) => {
           const { data } = res;
+          setWait(false)
           setMensaje(data.mensaje);
           if(data.mensaje === "Usuario logueado correctamente"){
             setColorMensaje(true)
@@ -86,6 +92,7 @@ const Login = () => {
 
         <div className='text-container w-100 mb-4'>
           {mensaje ? <Message mensaje={mensaje} colorMensaje={colorMensaje}/> : null}
+          {wait ? <Loading/> : null}
           <LightSpeed left>
             <h1>Hola De Nuevo!</h1>
             <h5>Por favor, ingrese sus credenciales. <span>si las ha olvidado contactese con el equipo de atención al cliente: systemeasysecurity@col.com</span></h5>

@@ -5,15 +5,17 @@ import NavbarMobile from '../components/NavbarMobile';
 import SpinnerLoading from '../components/SpinnerLoading';
 // css
 import '../styles/Editar.scss';
+// sweetAlert2 para alertas
+import Swal from 'sweetalert2';
 // axios
 import axios from 'axios';
 // context
 import { DarkModes } from '../context/DarkMode';
 
 // endpoint para obtener todos los equipos
-const getAllEquipment = "http://localhost:8080/registers/all";
+const getAllEquipment = "https://registers-system-easy.herokuapp.com/registers/all";
 // endpoint para actualizar un equipo
-const updateEquipment= "http://localhost:8080/registers/update/";
+const updateEquipment= "https://registers-system-easy.herokuapp.com/registers/update/";
 
 const Editar = ({name}) => {
 
@@ -86,6 +88,13 @@ const Editar = ({name}) => {
         })
         setData(dataNueva);
         abrirModalEditar();
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Equipo Editado Correctamente',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
 
       )

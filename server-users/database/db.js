@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 const db = async () =>{
-    await mongoose.connect(process.env.MONGODB_URI_LOGIN)
+    await mongoose.connect(process.env.MONGODB_URI)
     .then(()=> console.log("MONGODB ONLNE"))
     .catch(error => console.error(error))
 

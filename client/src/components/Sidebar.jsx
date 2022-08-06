@@ -41,7 +41,7 @@ const Sidebar = () => {
     <div className={modeLocalStorage ? 'sidebar d-none d-xl-none d-xxl-block' : 'sidebar-dark d-none d-xl-none d-xxl-block'}>
 
         <div className='d-flex flex-column'>
-            <h5 className='text-center mt-4 text-light'>Easy Inventory De'Avila</h5>
+            <h5 className='text-center mt-4 text-light'>Easy Easy De'Avila</h5>
             <p className='text-center text-success'>V-demo 0.1</p>
         </div>
 
@@ -62,15 +62,15 @@ const Sidebar = () => {
                 </NavLink>
             </li>
             <hr/>
-            <li>
+            {/* <li>
                 <NavLink to="/dashboard/detalles" className="w-100 h-100 d-block" 
                 style={({ isActive }) =>
                 isActive ? activeStyle : undefined
                 }>
                     <HiOutlineClipboardList className='m-2'/><span className='m-2'>Detalles</span>
                 </NavLink>
-            </li>
-            <hr/>
+            </li> */}
+            {/* <hr/> */}
             <li>
                 <NavLink to="/dashboard/agregar" className="w-100 h-100 d-block" 
                 style={({ isActive }) =>

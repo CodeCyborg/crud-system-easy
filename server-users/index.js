@@ -1,8 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./database/db')
-const controllers = require('./controllers');
-const verifyToken = require('./middlewares/verifyToken');
+const routesUsers = require('./routes/routesUsers')
+// const controllers = require('./controllers');
+// const verifyToken = require('./middlewares/verifyToken');
 
 const app = express();
 
@@ -10,14 +11,16 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-app.get('/user', verifyToken, controllers.getUserById)
-app.post('/register', controllers.register)
-app.post('/login', controllers.login)
+app.use("/users", routesUsers)
 
-const PORT = process.env.PORT || 4000;
+// app.get('/user', verifyToken, controllers.getUserById)
+// app.post('/register', controllers.register)
+// app.post('/login', controllers.login)
 
-app.listen(PORT, ()=>{
-    console.log(`server (users) listening on port: ${PORT}`);
+const port = process.env.PORT || 8081;
+
+app.listen(port, ()=>{
+    console.log(`server (users) listening on port: ${port}`);
     db()
 })
 

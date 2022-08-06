@@ -13,9 +13,9 @@ import { DarkModes } from '../context/DarkMode';
 
 
 // endpoint para añadir un equipo
-const addEquipment = "http://localhost:8080/registers/add";
+const addEquipment = "https://registers-system-easy.herokuapp.com/registers/add";
 // endpoint para obtener todos los equipos
-const getAllEquipment = "http://localhost:8080/registers/all";
+const getAllEquipment = "https://registers-system-easy.herokuapp.com/registers/all";
 
 // recibimos por props el name del usuario
 const Agregar = ({name}) => {

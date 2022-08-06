@@ -14,7 +14,7 @@ import ReactHTMLTableToExcel from 'react-html-table-to-excel'
 import { FindById } from '../context/FindById';
 import { DarkModes } from '../context/DarkMode';
 // endpoint para obtener todos los datos
-const getAllRegisters = "http://localhost:8080/registers/all";
+const getAllEquipment = "https://registers-system-easy.herokuapp.com/registers/all";
 
 const Listado = ({name}) => {
 
@@ -39,7 +39,7 @@ const Listado = ({name}) => {
   // PETICIONES
   const peticionGet=()=>{
     setTimeout(() => {
-      axios.get(getAllRegisters)
+      axios.get(getAllEquipment)
       .then(response=>{
         setData(response.data)
       })

@@ -36,7 +36,7 @@ const Home = ({ name }) => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://localhost:8080/registers/all")
+      fetch("https://registers-system-easy.herokuapp.com/registers/all")
         .then((data) => {
           const res = data.json();
           return res;
@@ -70,13 +70,13 @@ const Home = ({ name }) => {
 
   return (
     <>
-      <div className="d-xxl-none navbarMobile">
+      <div className={modeLocalStorage ? "d-xxl-none navbarMobile" : "d-xxl-none navbarMobile navbarMobile-dark"}>
         <NavbarMobile name={name}/>
       </div>
       <Header name={name} />
-      <div className="p-5">
+      <div className={modeLocalStorage ? "p-5" : "p-3"}>
         {/* <div className=''> */}
-          <div className="row d-flex justify-content-around w-100">
+          <div className={modeLocalStorage ? "row d-flex justify-content-around w-100" : "row d-flex mx-auto justify-content-around w-100"}>
 
           <div className="col-md-3">
               <div className={modeLocalStorage ? "card bg-light mb-5" : 'card bg-dark text-light mb-5'}>
@@ -105,7 +105,7 @@ const Home = ({ name }) => {
             </div>
 
             <div className={modeLocalStorage ? "col-md-3 bg-white rounded" : "col-md-3 bg-dark rounded"}>
-              <h5 className={modeLocalStorage ? "text-dark text-center" : "text-light text-center"}>Mantenimientos</h5>
+              <h5 className={modeLocalStorage ? "text-dark text-center" : "text-light text-center"}>GRÁFICO</h5>
               <Pie className="m-2" data={data} />
             </div>
             <div className="col-md-3">
@@ -120,18 +120,18 @@ const Home = ({ name }) => {
                   </div>
                   <hr/>
                   <div className="d-flex justify-content-between">
-                    <label>Released:</label>
-                    <h6 className="card-text">Demo 0.1</h6>
+                    <label>Create By:</label>
+                    <h6 className="card-text">Daniel De Ávila / Web Developer</h6>
                   </div>
                   <hr/>
                   <div className="d-flex justify-content-between">
                     <label>Theme Version:</label>
-                    <h6 className="card-text">Demo 0.1</h6>
+                    <h6 className="card-text">Dark And Light</h6>
                   </div>
                   <hr/>
                   <div className="d-flex justify-content-between">
                     <label>Date Upload:</label>
-                    <h6 className="card-text">Demo 0.1</h6>
+                    <h6 className="card-text">13 / 07 / 2022</h6>
                   </div>
                   <hr/>
                   
